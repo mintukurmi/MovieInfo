@@ -1,0 +1,38 @@
+#movies img, #movie img {
+	width: 100%;
+}
+
+@media(min-width: 575px) {
+
+#movies .col-md-3 .well {
+	height: 390 px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+#movies .col-md-3 img {
+	height: 300px;
+	padding-bottom: 5px;}
+}
+
+
+
+#movies .col-md-3 img {
+	height: 340px;
+}
+
+#movies .col-md-3 .well {
+	height: 390 px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.navbar-brand {
+  font-family: 'Kaushan Script';
+  color: yellow;
+  text-transform: capitalize; 
+}
+
+footer {
+	margin-top: 50px;
+}

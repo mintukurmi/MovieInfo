@@ -1,6 +1,9 @@
+ let loader = document.getElementById("loader");
+
  $(document).ready(() => {
  	$('#searchForm').on('submit', (e) => {
  		let searchText = $('#searchText').val();
+ 		loader.style.display = "block";
  		getMovies(searchText);
  		e.preventDefault();
  	});
@@ -15,7 +18,7 @@
 
  		$.each(movies, (index, movie) => {
  			output += `
-				<div class="col-md-3">
+				<div class="col-md-3 animate-bottom">
 					<div class="well text-center">
 						<img src="${movie.Poster}">
 						<h5>${movie.Title}</h5>
@@ -27,6 +30,7 @@
  			`;
  		}); 
 
+ 		loader.style.display = "none";
  		$('#movies').html(output);
  	})
  	.catch((err) => {
@@ -51,7 +55,7 @@
  		let movie = response.data;
 
  		let output = `
-			<div class="row">
+			<div class="row animate-bottom">
 				<div class="col-md-4">
 					<img src="${movie.Poster}" class="thumbnail">
 				</div>
@@ -86,6 +90,7 @@
 			</div>
  		`;
 
+ 		loader.style.display = "none";
  		$('#movie').html(output);
  	})
  	
